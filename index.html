@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;">
+    <meta charset="utf-8">
+    <script type="text/javascript"
+        src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/jquery-1.7.2.min.js">
+    </script>
+    <script type="text/javascript"
+        src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/bootstrap.min.js">
+    </script>
+    <style>
+        .sky-form section {
+            margin-bottom: 20px;
+        }
+
+        .tabbb_box input {
+            height: 34px;
+            border: none;
+            border-bottom: 1px solid #e5e5e5;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        .modal-footer {
+            border-top: none;
+            width: 100%;
+            padding: 3px;
+            font-size: 22px;
+            margin-bottom: 15px;
+            padding: 0 20px;
+        }
+
+        .modal-footer a {
+            display: block;
+            background-color: #268df7;
+            text-align: center;
+            color: #fff;
+            border-radius: 28px;
+        }
+
+        #sendcode88 {
+            border-radius: 18px;
+            float: right;
+        }
+
+        .form-group .font16 {
+            font-weight: bold;
+        }
+
+        h4.modal-title {
+            font-weight: bold;
+        }
+
+        .font16 {
+            font-size: 16px;
+        }
+
+        .modal.fade .modal-dialog {
+            transform: translate(0, 0)
+        }
+    </style>
+    <script language="javascript">
+        function isWeiXin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function isQQ() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/\sQQ/i) == "qq") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function gotoopenurl(url) {
+            if (isWeiXin()) {
+                alert("请在浏览器中打开！");
+            } else if (isQQ()) {
+                alert("请在浏览器中打开！");
+            } else {
+                <
+                if condition = "($userid neq '0') OR ($ispayed eq 1)" >
+
+                    window.location.href = url;
+
+                <
+                else />
+                $('#modifyphone').modal('show'); <
+                /if>
+
+            }
+        }
+    </script>
+
+
+    <link href="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/app.css"
+        rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="weixin" style="display: none">
+        <div class="click_opacity"></div>
+        <div class="to_btn">
+            <span class="span1"><img
+                    src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/click_btn.png"></span>
+            <span class="span2"><em>1</em> ������Ͻ�<img
+                    src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/menu.png">�򿪲˵�</span>
+            <span class="span2"><em>2</em>请点击<img
+                    src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/safari.png">在Safari中打开</span>
+            <span class="span2"><em>3</em>���ѧϰ���ν̡̳�<a
+                    href="http://sl.totovip.cn//Application/Home/View/Appipa/jc.html"><img
+                        src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/safari.png"></a></span>
+        </div>
+    </div>
+    <div id="weixin_an" style="display: none">
+        <div class="click_opacity"></div>
+        <div class="to_btn">
+            <span class="span1"><img
+                    src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/click_btn.png"></span>
+            <span class="span2"><em>1</em> ������Ͻ�<img
+                    src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/menu_android.png">�򿪲˵�</span>
+            <span class="span2 android_open"><em>2</em> ѡ��<img
+                    src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/android.png"></span>
+            <span class="span2"><em>3</em> ������QQ��΢��������</span>
+        </div>
+    </div>
+    <div id="qq" style="display: none">
+        <div class="click_opacity"></div>
+        <div class="to_btn">
+            <span class="span1"><img
+                    src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/click_btn.png"></span>
+            <span class="span2"><em>1</em> ������Ͻ�<img
+                    src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/menu.png">�򿪲˵�</span>
+            <span class="span2"><em>2</em> ѡ��<img
+                    src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/safari.png">��Safari������</span>
+            <span class="span2"><em>3</em>���ѧϰ���ν̡̳�<a
+                    href="http://sl.totovip.cn//Application/Home/View/Appipa/jc.html"><img
+                        src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/safari.png"></a></span>
+        </div>
+    </div>
+    <div id="qq_an" style="display: none">
+        <div class="click_opacity"></div>
+        <div class="to_btn">
+            <span class="span1"><img
+                    src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/click_btn.png"></span>
+            <span class="span2"><em>1</em> ������Ͻ�<img
+                    src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/menu_android.png">�򿪲˵�</span>
+            <span class="span2 android_open"><em>2</em> ѡ��<img
+                    src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/android.png"></span>
+            <span class="span2"><em>3</em> ������QQ��΢��������</span>
+        </div>
+    </div>
+    <script src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/slick.min.js">
+    </script>
+    <script src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/waypoints.min.js">
+    </script>
+    <script>
+        $(function () {
+            var browser = {
+                versions: function () {
+                    var u = navigator.userAgent,
+                        app = navigator.appVersion;
+                    return {
+                        trident: u.indexOf('Trident') > -1,
+                        presto: u.indexOf('Presto') > -1,
+                        webKit: u.indexOf('AppleWebKit') > -1,
+                        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,
+                        mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/),
+                        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+                        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+                        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1,
+                        iPad: u.indexOf('iPad') > -1,
+                        webApp: u.indexOf('Safari') == -1
+                    };
+                }()
+            }
+            if (is_weixin()) {
+                if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+                    $('#weixin').show();
+                } else {
+                    $('#weixin_an').show();
+                }
+            } else if (is_qq()) {
+                if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+                    $('#qq').show();
+                } else {
+                    $('#qq_an').show();
+                }
+            }
+            //  var os_type =  0;
+
+
+            var os_type = 1;
+
+
+            if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+                if (os_type == 2) {
+                    $("#seticon").attr("class", "icon-ios");
+                    $('#down2').show();
+                } else if (os_type == 0) {
+                    $("#seticon").attr("class", "icon-ios");
+                    $('#down2').show();
+                } else {
+                    $('#down2').hide();
+                    $("#seticon").attr("class", "icon-android");
+                    $('#down_tip').show().html('��ʹ�ð�׿�豸��װ');
+                }
+            } else if (browser.versions.android) {
+                if (os_type == 1) {
+                    $("#seticon").attr("class", "icon-android");
+                    $('#down2').show();
+                } else if (os_type == 0) {
+                    $("#seticon").attr("class", "icon-android");
+
+                    $('#down2').show();
+                } else {
+                    $('#down2').hide();
+                    $("#seticon").attr("class", "icon-ios");
+                    $('#down_tip').show().html('��ʹ��IOS�豸��װ');
+                }
+            }
+        })
+
+        function ajaxTj() {
+            var browser = {
+                versions: function () {
+                    var u = navigator.userAgent,
+                        app = navigator.appVersion;
+                    return {
+                        trident: u.indexOf('Trident') > -1,
+                        presto: u.indexOf('Presto') > -1,
+                        webKit: u.indexOf('AppleWebKit') > -1,
+                        gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1,
+                        mobile: !!u.match(/AppleWebKit.*Mobile.*/) || !!u.match(/AppleWebKit/),
+                        ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+                        android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1,
+                        iPhone: u.indexOf('iPhone') > -1 || u.indexOf('Mac') > -1,
+                        iPad: u.indexOf('iPad') > -1,
+                        webApp: u.indexOf('Safari') == -1
+                    };
+                }()
+            }
+
+            var tip_val = $('#ios_tips').val();
+            if (tip_val == 1) {
+                $('.pos_all').css('display', 'block');
+                $('#pos_inherit').addClass('pos_inherit');
+
+            }
+            if (!is_weixin() || !is_qq()) {
+                if (browser.versions.ios || browser.versions.iPhone || browser.versions.iPad) {
+                    $("#down2").hide();
+                    $("#down_loading").show().delay(5000).fadeOut(100);
+                    $("#install_tips").hide().delay(5000).fadeIn(200);
+                }
+            }
+
+            $.ajax({
+                type: "GET",
+                url: '/app/tj',
+                data: {
+                    package_key: '98d0f7fc5457ddb0777534f47adb9119'
+                },
+                success: function (msg) {
+                    //console.log(msg);
+                    if (msg == 1) {
+                        $('#down1').attr('href', '#');
+                        $("#down1").attr("target", "");
+                        $('#down2').attr('href', '');
+                        $("#down2").attr("target", "#");
+                    }
+                }
+            });
+        }
+
+        function is_weixin() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/MicroMessenger/i) == "micromessenger") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function is_qq() {
+            var ua = navigator.userAgent.toLowerCase();
+            if (ua.match(/\sQQ/i) == " qq") {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        $(function () {
+            $('.close_ios9').click(function () {
+                $('.pos_all').css('display', 'none');
+                $('#pos_inherit').removeClass('pos_inherit');
+            });
+
+            $("#btnFk").on("click", function () {
+                $('#btncontact').css('display', 'block');
+                $('#btnFk').css('display', 'none');
+                $("#feedback_content_box").slideDown(600);
+                $("#feedback_content_box").animate({
+                    top: 0
+                }, 600);
+                $("#feedback_content_box").focus();
+            });
+
+
+
+            $("#submit").on("click", function () {
+                var contact = $('#btncontact').val().trim();
+                var content = $('textarea').val().trim();
+                var app_key = "3c4f68eaf91d14a5b16a9129f0ffba0f";
+                var app_name = "��ת����";
+                var url = '/feedback/add';
+
+                if (!content || content == '��������') {
+
+                    $("#content_tips").css({
+                        display: 'block'
+                    });
+                    return false;
+                }
+
+                $('#toggle').css('display', 'none');
+                $('#content_tips').css('display', 'none');
+                $("#feedback_content_box").slideUp(600);
+                $("#feedback_content_box").animate({
+                    top: 20
+                }, 600);
+
+
+                if (!contact || contact == 'Email/QQ/΢��/�绰') {
+                    contact = '����';
+                }
+
+                $.post(url, {
+                    contact: contact,
+                    content: content,
+                    app_key: app_key,
+                    app_name: app_name
+                }, function (msg) {
+                    if (msg) {
+                        $('#for_tips,textarea,#btnFk,#submit').css({
+                            display: 'none'
+                        })
+                    } else {
+                        $('.feedback_tip').text('�ύʧ�ܣ��� <a href="/site/contact">�²�</a>');
+                    }
+                    $('.feedback_tip').css({
+                        display: 'block'
+                    })
+                }, 'json')
+            });
+        })
+    </script>
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0">
+    <title>夕阳应用分发系统</title>
+    <!-- <script src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/zepto.min.js"
+        type="text/javascript"></script> -->
+    <script src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/swiper.jquery.min.js"
+        type="text/javascript"></script>
+    <link rel="stylesheet"
+        href="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/nmbstyle.css">
+    <link href="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/download.css"
+        rel="stylesheet">
+    <link href="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/swiper-3.3.1.min.css"
+        rel="stylesheet">
+    <link href="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/ab.css"
+        rel="stylesheet">
+    <style type="text/css">
+        .wechat_tip,
+        .wechat_tip>i {
+            position: absolute;
+            right: 10px
+        }
+
+        .wechat_tip {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            background: #3ab2a7;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 500;
+            width: 135px;
+            height: 60px;
+            border-radius: 10px;
+            top: 15px
+        }
+
+        .wechat_tip>i {
+            top: -10px;
+            width: 0;
+            height: 0;
+            border-left: 6px solid transparent;
+            border-right: 6px solid transparent;
+            border-bottom: 12px solid #3ab2a7
+        }
+
+        .mask img {
+            max-width: 100%;
+            height: auto
+        }
+    </style>
+    <link rel="stylesheet"
+        href="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/psanduan.css">
+
+    <script type="text/javascript">
+        function mobile_provision() {
+            document.getElementById('actions').innerHTML =
+                '<p>���ڰ�װ���밴 Home ��������鿴</p><button onclick="location.href=\'/static/app/app.mobileprovision\'">��������</button>';
+        }
+
+        function install_app(_link) {
+            // Animation
+            document.getElementById('actions').innerHTML =
+                '<button style="min-width:43px;width:43px;padding:12px 0;border-top-color:transparent;border-left-color:transparent" class="loading">&nbsp;</button>';
+            setTimeout("function(){}", 6000);
+            // Redirect to download url
+            location.href = _link;
+        }
+
+        function install_ing(_link) {
+            location.href = _link;
+            $(".text-bar")[0].innerHTML = "��װ��";
+            $(".change").show();
+            $(".text-bar").attr("disabled", "true");
+            $(".top-bar").css("width", "0.1%");
+            timer = setTimeout(function () {
+                $(".top-bar").css("width", "0.1%").animate({
+                    width: "20%"
+                }, 1e3, function () {
+                    $("#mq1").hide();
+                    $(".device").show();
+                    var mySwiper = new Swiper(".swiper-container1", {
+                        nextButton: ".next_btn",
+                        autoplay: 3e3,
+                        autoplayStopOnLast: true
+                    });
+                    $(".top-bar").css("width", "20%").animate({
+                        width: "100%"
+                    }, 15e3, function () {
+                        $(".text-bar")[0].innerHTML = "��������";
+                        $(".text-bar").removeAttr("disabled");
+                        $(".text-bar").attr("href", "/static/app/app.mobileprovision");
+                    });
+                });
+            }, 1e3);
+        }
+    </script>
+
+
+    <span class="pattern left"><img
+            src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/left.png"></span>
+    <span class="pattern right"><img
+            src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/right.png"></span>
+    <div class="out-container">
+        <div class="main">
+            <header>
+                <div class="table-container">
+                    <div class="cell-container">
+                        <div class="app-brief">
+                            <div class="icon-container wrapper">
+                                <i class="icon-icon_path bg-path"></i>
+                                <span class="icon"><img
+                                        src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/android(1).png"
+                                        onerror="this.src=&#39;/static/app/Android.png&#39;"></span>
+                                <span class="qrcode"><img
+                                        src="https://txincos-10051486.cos.ap-shanghai.myqcloud.com/App-distribution/PageAssets/qrcode.php"></span>
+                            </div>
+
+                            <h1 class="name_wrapper" id="appName">
+                                HelloWorld1
+                            </h1>
+
+                            <p class="scan-tips">
+                                欢迎使用夕阳应用分发系统！扫描右上方二维码下载应用
+                            </p>
+                            <div class="release-info">
+                                <p id="versionName">Version: 1.0, Build 1000</p>
+                                <p id="releaseDate">2019-7-31</p>
+                            </div>
+
+                            <span id="down_tip" style="color:red;"></span>
+
+                            <div id="actions" class="actions type-android">
+                                <button id="downBtn"
+                                    onclick="install_app(window.appUrl)">
+                                    安装
+                                </button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="footer">Copyright Kozumi Shiroziki@Github
+                <span id="contactBox">
+                    <a class="one-key-report" href="https://github.com/xuyang1638">Click here contact me</a>
+                </span>
+            </div>
+        </div>
+    </div>
+    <div class="mask" style="display:none"></div>
+
+    <script>
+        function GetRequest() {
+            const url = location.search; //获取url中"?"符后的字串
+            let theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                let str = url.substr(1);
+                strs = str.split("&");
+                for (let i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+
+        // Application layer code
+        const wrapperIdentifies = ['appName', 'appUrl', 'versionName', 'releaseDate']
+        const requestParams = GetRequest()
+        
+        // Change attributes
+        for(var i = 0; i < 4; i++) {
+            // Change each attribute
+            console.log(wrapperIdentifies[i] + ':' + requestParams[wrapperIdentifies[i]])
+            if (i != 1) {
+                document.getElementById(wrapperIdentifies[i]).innerText = requestParams[wrapperIdentifies[i]]
+            }
+        }
+
+        console.log(requestParams[wrapperIdentifies[1]])
+        // Change download url
+        // document.getElementById('downBtn').onclick = "install_app('" + requestParams[wrapperIdentifies[1]]+ "')"
+        
+        // Set global variable url
+        window.appUrl = requestParams[wrapperIdentifies[1]]
+    </script>
+</body>
+
+</html>
